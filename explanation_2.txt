@@ -1,0 +1,9 @@
+The first step is to initialize a list where we will store the directories containing the file with the selected suffix.
+
+Then we will create a for loop where we iterate though all the objects at the current directory, if the current object
+ends with the required suffix, we append the directory to the list we initialized before, else we try to call the function
+we created (recursion) where we use as path the directory of the current object we are at the time of iterative process, if the
+recursive function won't return something we continue the for loop.
+
+The big O notation of this process is O(n) both for time and space complexity where n is the number of objects
+we need to scan / store. 
