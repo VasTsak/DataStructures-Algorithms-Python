@@ -1,0 +1,38 @@
+Firstly, we create a binary tree object to store the right and left leaves.
+Then we create a function to populate the tree, the logic behind the function is:
+'if you find a string (meaning that it is a character) return the node with its encoding
+otherwise apply the function recursively to its left and right children (because if it
+is not a string it means that it has children) and add 1 to the encoding of the right
+and 0 to the encoding of the left child. Having created the function to populate the
+tree, we create a function to create a hash table with the frequencies and then sort it
+by frequency in descending order.
+
+After we create the helper functions, we are ready to create the huffman_encoding function.
+We initialize the deliverable as an empty string, then we test the case that input string
+is empty and we return the empty encoding and None as tree since we have no tree nor encoding.
+Then we create the dictionary with the sorted frequencies by calling the sort_freq function.
+We also take the exceptional case where there is only one unique character as input where we
+set the tree to that letter and then we just assign the encoding of 0 to that character.
+Then we create an iterative process to populate the Huffman tree with a termination test whether
+the length of the sorted dictionary is empty because that would mean that we have gone through the
+whole dictionary. In this iterative process we take the last two elements (since it is sorted that
+would mean that they are the least occurred characters/nodes) then we remove those two elements and
+we add the combined node of those two (containing the sum of their frequencies) and then
+we sort again the list so that we get the least occurred elements to the back of the list.
+Having populated the Huffman tree, we put its root through the create_tree function so that we can
+assign it its encoding. After the encoding of the tree, we go through the input string and we just add the
+encoding of every character of the string to the encoded_data string.
+
+Finally we create the decoding function which is fairly straight forward. We initialize an empty string,
+then we make sure that the input string is not empty. We also check if there is only one unique character
+in the encoding data (if statement whether the tree is a string) where we assign that characters as many times
+as the length of the encoding data. Having done that, we go through the encoded data
+and for every bit and based on its value (0 stands for left and 1 for right) we go down the tree till
+we find a character which we add to the decoded string, then we initialize the tree again for the next
+character.
+
+The big O notation of this script is O(nlogn) where n is the number of characters there is in the string.
+Because this is the most computationally expensive process we do is the for loop through the encoded data
+at huffman_decoding function. The space complexity of this program is O(n) where n is the length of the
+string (the very goal of this program is to compress that string so it makes sense that this string is the
+most memory heavy process.)

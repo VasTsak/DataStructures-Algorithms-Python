@@ -1,0 +1,18 @@
+First thing we do, is create two classes, a Node and a LinkedList class, where
+we have the standard methods, but also an additional one, the remove_dups method
+which deletes the node that is present in the list more than once.
+
+In the union function w initialize an empty list, then we check if both the linked
+lists we use as parameters are populated  then we append all the elements of the linked lists to the list we initialized.
+Then we remove the duplicates using the remove_dups method.
+
+In the intersection function we initialize again an empty list,
+then we check out if the two input linked lists are populated and if they are not we return
+the appropriate message. Having done the edge cases check, we parse through
+the first list and if the value is in the second list, we append the value to the
+initialized list. Finally we remove the duplicates with the remove_dups method.
+
+The big o notation of this script is O(n + m) where n is the number of elements
+from the first list and m is the number of elements from the second list. The memory
+complexity of this program is O(n + m) where n is the size of first list and m is the
+size of the second list. 
