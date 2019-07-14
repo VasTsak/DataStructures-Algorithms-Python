@@ -17,7 +17,7 @@ We will solve the following problems using data structures:
 #### 5. Impliment a blockchain 
 #### 6. Find the union and intersection between those two linked lists
 
-## 3. Basic Algorithms
+## 2. Basic Algorithms
 
 #### 1. Finding the Square Root of an Integer
 #### 2. Search in a Rotated Sorted Array
@@ -27,4 +27,4 @@ We will solve the following problems using data structures:
 #### 6. Max and Min in a Unsorted Array
 #### 7. HTTPRouter using a Trie
 
-## 4. Advanced Algorithms
+## 3. Advanced Algorithms
