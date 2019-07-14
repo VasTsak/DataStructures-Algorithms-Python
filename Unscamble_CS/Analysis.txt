@@ -1,0 +1,25 @@
+Task0.py: O(1)
+The Task0.py script has contant time because no matter the number of calls or texts we have we only need
+the first and last rows.
+
+Task1.py: O(2n + 2m) where n is the number of texts and m the number of calls
+
+The Task1.py script has linear time complexity because we have only simple 2 for loops with two operations each
+
+Task2.py: O(11n + 3)
+
+The Task2.py script has linear time complexity because we have 2 simple for loops with 11 likes of code and 3 simple operations
+that will happen no matter the number of calls.
+
+Task3.py: O(nlogn + 8n +7) where n in the number of calls
+
+The Task3.py script has order of nlogn from the sort() method applied. Moreover we have 6n because we have 2 loops with 2 lines of code each
+but also we have one for loop with 4 lines of code and 7 operations that happen no matter the number of calls.
+
+
+Task4.py: O(mlogm + 6m +2n + 5)  where m is number of calls and n is number of texts
+
+The Task4.py script has order of mlogm from the sort() method applied. It also has 6m because it has 3 loops of 2 lines each
+and 2n because it has one loop with 2 lines and 5 operations that run no matter the number of calls or texts. 
+
+Notice that in this case for big-O-notation I write the worst case.
